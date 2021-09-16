@@ -44,7 +44,6 @@ void scalesGen()
 
 void makeScale(int x, int y)
 {
-  if(mouseNear(x, y) == true) shade += 20;
   fill(0, 0, center);
   ellipse(x, y, 50, 50);
   fill(0, 0, shade);
@@ -52,26 +51,10 @@ void makeScale(int x, int y)
   arc(x, y, 50, 50, radians(-30), radians(90), OPEN);
   arc(x + 25, y + 25, 50, 83, radians(179), radians(270), OPEN);
   arc(x - 25, y + 25, 50, 83, radians(-90), radians(1), OPEN);
-  //bz(x, y);
-  if(mouseNear(x, y) == true) shade -= 20;
-}
-
-void bz(int x, int y)
-{
-  noFill();
-  bezier(x - 25, y - 25, x, y, x, y, x, y + 25);
-  bezier(x + 25, y - 25, x, y, x, y, x, y + 25);
 }
 
 void flip()
 {
   if(b == false) b = true;
   else b = false;
-}
-
-boolean mouseNear(int x, int y)
-{
-  if(Math.abs(x - mouseX) <= 50 && Math.abs(y - mouseY) <= 50) return true;
-  else return false;
-  // MAYBE MAKE INT FUNCTION FOR DISTANCE FROM X/Y???
 }
