@@ -7,20 +7,6 @@ void setup()
   scalesGen();
 }
 
-int center = 20;
-boolean cdown = false;
-
-void draw()
-{
-  shade = 90;
-  scalesGen();
-  if(center >= 15) cdown = true;
-  if(center <= 5) cdown = false;
-  if(cdown == false) center += 1;
-  else center -= 1;
-  
-}
-
 boolean b = false;
 int shade = 90;
 void scalesGen()
@@ -44,7 +30,7 @@ void scalesGen()
 
 void makeScale(int x, int y)
 {
-  fill(0, 0, center);
+  fill(0, 0, 10);
   ellipse(x, y, 50, 50);
   fill(0, 0, shade);
   arc(x, y, 50, 50, radians(90), radians(210), OPEN);
