@@ -25,8 +25,8 @@ makeScale(250, 250);
         makeScale(x, y);
       }
      if(b == false) b = true;
-     else b = false;*/
-  }
+     else b = false;
+  }*/
 }
 
 void makeScale(int x, int y)
