@@ -12,7 +12,7 @@ int shade = 80;
 void scalesGen()
 {
 makeScale(250, 250);
-  /*for(int y = 500; y > -80; y -= 30)
+  for(int y = 500; y > -80; y -= 30)
   {
     shade -= 100/21;
     if(b == true)
@@ -27,7 +27,7 @@ makeScale(250, 250);
       }
      if(b == false) b = true;
      else b = false;
-  }*/
+  }
 }
 
 void makeScale(int x, int y)
