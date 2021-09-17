@@ -8,7 +8,7 @@ void setup()
 }
 
 boolean b = false;
-int shade = 80;
+int shade = 90;
 void scalesGen()
 {
 makeScale(250, 250);
