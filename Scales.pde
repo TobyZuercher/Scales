@@ -3,11 +3,12 @@ void setup()
   size(400, 400);
   background(50);
   strokeWeight(3);
+  colorMode(HSB, 100, 100, 100);
   scalesGen();
 }
 
 boolean b = false;
-int shade = 90;
+int shade = 80;
 void scalesGen()
 {
 makeScale(250, 250);
@@ -31,11 +32,9 @@ makeScale(250, 250);
 
 void makeScale(int x, int y)
 {
-  fill(0, 0, 10);
-  ellipse(x, y, 50, 50);
   fill(0, 0, shade);
-  arc(x, y, 50, 50, radians(90), radians(210), OPEN);
-  arc(x, y, 50, 50, radians(-30), radians(90), OPEN);
-  arc(x + 25, y + 25, 50, 83, radians(179), radians(270), OPEN);
-  arc(x - 25, y + 25, 50, 83, radians(-90), radians(1), OPEN);
+  ellipse(x, y, 50, 50);
+  noFill();
+  bezier(x - 25, y - 25, x, y, x, y, x, y + 25);
+  bezier(x + 25, y - 25, x, y, x, y, x, y + 25);
 }
