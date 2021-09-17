@@ -10,7 +10,8 @@ boolean b = false;
 int shade = 90;
 void scalesGen()
 {
-  for(int y = 500; y > -80; y -= 30)
+makeScale(250, 250);
+  /*for(int y = 500; y > -80; y -= 30)
   {
     shade -= 100/21;
     if(b == true)
@@ -24,7 +25,7 @@ void scalesGen()
         makeScale(x, y);
       }
      if(b == false) b = true;
-     else b = false;
+     else b = false;*/
   }
 }
 
