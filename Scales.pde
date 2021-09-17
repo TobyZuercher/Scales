@@ -3,7 +3,6 @@ void setup()
   size(400, 400);
   background(50);
   strokeWeight(3);
-  colorMode(HSB, 100, 100, 100);
   scalesGen();
 }
 
@@ -24,7 +23,8 @@ void scalesGen()
       {
         makeScale(x, y);
       }
-     flip();
+     if(b == false) b = true;
+     else b = false;
   }
 }
 
@@ -37,10 +37,4 @@ void makeScale(int x, int y)
   arc(x, y, 50, 50, radians(-30), radians(90), OPEN);
   arc(x + 25, y + 25, 50, 83, radians(179), radians(270), OPEN);
   arc(x - 25, y + 25, 50, 83, radians(-90), radians(1), OPEN);
-}
-
-void flip()
-{
-  if(b == false) b = true;
-  else b = false;
 }
